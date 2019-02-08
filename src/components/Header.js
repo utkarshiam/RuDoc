@@ -44,7 +44,7 @@ cool(){
           </ul>
           <nav>
               <div class="nav-wrapper grey lighten-5">
-                <a href="#" class="brand-logo"><font color="green">RuDoc</font></a>
+                <a href="#" class="brand-logo"><Link to='/'><font color="green"> RuDoc</font></Link></a>
                 <ul  class="right">
                   {
                     appStore.auth.isLoggedIn?
@@ -56,7 +56,7 @@ cool(){
                         <li><a class="dropdown-trigger green btn" href="#!" data-target="dropdown1">MENU<i class="material-icons right">arrow_drop_down</i></a></li>
                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                         <li>
-                          <button className='green btn' onClick={remoteActions.signOut}> Sign Out</button>
+                          <button className='white btn' onClick={remoteActions.signOut}> <font color="green">Sign Out</font></button>
                         </li>
 
                         <li>
@@ -67,9 +67,12 @@ cool(){
                       </Fragment>
                     ) :
                     (
+                      <ul>
                         <li>
-                          <button className='btn' onClick={remoteActions.signIn}>Sign In</button>
+                          <button className='btn white' onClick={remoteActions.signIn}><font color="green">Sign In</font></button>
                         </li>
+                        <li><Link className="btn white" to = "/about"><font color="green">About Us</font></Link></li>
+                        </ul>
                     )
                   }
 
