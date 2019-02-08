@@ -24,8 +24,8 @@ class UserAdd extends Component{
   }
 handleClick(){
 
-    var fund1=this.state.fundx;
-    var fundy=this.state.fund + fund1
+    var fund1=Number(this.state.fundx);
+    var fundy=Number(this.state.fund) + fund1
     this.setState({
       fund: fundy,
       fundx:0

@@ -1,6 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import * as remoteActions from '../scripts/remoteActions.js';
-import Header1 from '../components/Header1.js';
+import Header from '../components/Header.js';
 import { Link } from 'react-router-dom';
 import appStore from '../store/appstore.js';
 import { observer } from 'mobx-react';
@@ -29,11 +29,11 @@ class existingGroups extends Component{
     .then((querySnapshot)=> {
         querySnapshot.forEach((doc)=> {
             // doc.data() is never undefined for query doc snapshots
-            var groupDict= doc.data().groups;
+            var campDict= doc.data().camps;
             var arrGroup=[]
-            for(var x in groupDict){
+            for(var x in campDict){
               arrGroup.push({
-                [x]: groupDict[x]
+                [x]: campDict[x]
               })
             }
             this.setState({
@@ -51,8 +51,9 @@ class existingGroups extends Component{
         {
             appStore.auth.isLoggedIn ?
               ( <Fragment>
-                <Header1/>
-                <button className='btn green' onClick={()=>{this.showGroups()}}>Click to show existing groups for this user</button>
+                <Header/>
+                <br/>
+                <button className='btn blue-grey darken-3' onClick={()=>{this.showGroups()}}>Click to show existing Fundraisers and Write testimonials!</button>
                 <ul class="collection white">
                 {
                   this.state.arr.map(function(m, i){
@@ -61,7 +62,23 @@ class existingGroups extends Component{
                         var y= m[x]
                       }
                       return(
-                      <li class="collection-item white"><p key={i}><Link to={"/MsgPage/" + x}>  {y}</Link> </p></li>
+                        <li>
+                        <div>
+                        <pre key={i}>
+                        <div class="row">
+                          <div class="col s12 m6">
+                            <div class="card blue-grey darken-1">
+                              <div class="card-content white-text">
+
+                                <p><b>Fundraiser Program:- {y}</b></p>
+                              </div>
+                              <div class="card-action">
+                                <Link to={"/existingGroups/"+x}>Write about this experience!</Link>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        </pre></div></li>
           )
         })
       }

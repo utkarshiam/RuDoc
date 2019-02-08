@@ -21,7 +21,9 @@ class createGroup extends Component {
       location: null,
       date: null,
       fund:0,
-      status: false
+      status: false,
+      testimonials: null,
+      anyblog: false
       //add users
 
     }
@@ -33,6 +35,8 @@ class createGroup extends Component {
     var location= this.state.location;
     var date=this.state.date;
     var fund=this.state.fund;
+    var testimonials= this.state.testimonials
+    var anyblog= this.state.anyblog
 
     console.log("chutiya" + campName);
     var campId= randomstring.generate();
@@ -79,7 +83,10 @@ class createGroup extends Component {
      date: date,
      fund: fund,
      status: true,
-     budget:budget
+     budget:budget,
+     testimonials: testimonials,
+     anyblog:anyblog
+
 
  })
  .then(function(docRef) {

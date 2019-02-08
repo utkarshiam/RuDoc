@@ -39,8 +39,9 @@ cool(){
         <div>
         <ul id="dropdown1" class="dropdown-content">
           <li><Link to='/createGroup'> Start a campaign</Link></li>
-
-          <li><Link to='/'>Add testimony</Link></li>
+          <li><Link to='/'>About Us</Link></li>
+          <li><Link to='/'>Verify Yourself</Link></li>
+          <li><Link to='/Blogs'>Blogs</Link></li>
           </ul>
           <nav>
               <div class="nav-wrapper blue-grey darken-3">
@@ -64,7 +65,7 @@ cool(){
                         </li>
 
                         &nbsp;&nbsp;&nbsp;
-                        <li><a  className='cyan-text text-lighten-4'>{appStore.currentUser.displayName}</a></li>
+                        <li><a  className='cyan-text text-lighten-4'><Link to='/existingGroups'>{appStore.currentUser.displayName}</Link></a></li>
 
                         </ul>
                          <ul className = "sidenav" id="mobile-demo">
@@ -74,7 +75,11 @@ cool(){
 
         <li><Link to='/createGroup'> Start a campaign</Link></li>
 
-          <li><Link to='/'>Add testimony</Link></li>
+
+          <li><Link to='/'>Verify yourself</Link></li>
+          <li><Link to='/existingGroups'>{appStore.currentUser.displayName}</Link></li>
+          <li><Link to='/Blogs'>Blogs</Link></li>
+          <li><Link to='/'>About Us</Link></li>
   </ul>
                       </Fragment>
                     ) :
@@ -84,14 +89,16 @@ cool(){
                         <li>
                           <a className=' cyan-text text-lighten-4' onClick={remoteActions.signIn}>Sign In</a>
                         </li>
+                        <li><Link className="cyan-text text-lighten-4" to = "/Blogs">Blogs</Link></li>
                         <li><Link className="cyan-text text-lighten-4" to = "/about">About Us</Link></li>
                         </ul>
                                   <ul className = "sidenav" id="mobile-demo">
                                   <li>
                           <Link to className='white btn green-text' onClick={remoteActions.signIn}> Sign In</Link>
                         </li>
-
+            <li><Link to='/Blogs'>Blogs</Link></li>
           <li><Link to='/'>About Us</Link></li>
+
 
   </ul>
 

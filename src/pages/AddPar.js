@@ -3,7 +3,7 @@ import appStore from '../store/appstore.js';
 import { Link } from 'react-router-dom';
 import * as remoteActions from '../scripts/remoteActions.js';
 import { observer } from 'mobx-react';
-import Header1 from '../components/Header1';
+import Header from '../components/Header';
 import fire from '../scripts/fire.js';
 import firebase from 'firebase';
 var db =fire.firestore();
@@ -13,64 +13,66 @@ class AddPar extends Component{
   constructor(props){
     super(props)
     this.state=({
-      Suarr:[],
-      groupId:null,
-      groupName: null,
+      testimonials:null,
+      testimonials1:null,
+      name: null,
+      dId:null
     })
   }
 
   componentDidMount(){
-         remoteActions.setListenerOnAuthChange()
+         remoteActions.setListenerOnAuthChange();
+         this.grouping();
     }
-kootah(){
-  db.collection("users")
-.get()
-.then((querySnapshot)=> {
-  var arr=[]
-  var arrId=[]
-  var finalArr=[]
-  var lamba=0
 
-    querySnapshot.forEach((doc)=> {
-        // doc.data() is never undefined for query doc snapshots
+    handleClick(){
 
-        var groupDict=doc.data().name
-        var idDict=doc.data().uid
-        arr.push(groupDict)
-        arrId.push(idDict)
-    });
-    var s = new Set(arr)
-    console.log(arr,s)
-    var idset=new Set(arrId)
-    var newarr=Array.from(s)//name
-    var newIdArr= Array.from(idset)//id
+        var fund1=this.state.testimonials1;
+        var cid= this.props.match.params.cid;
+        db.collection("campaign").where("cid", "==", cid)
+        .get()
+        .then((querySnapshot)=> {
+            querySnapshot.forEach((doc)=> {
+                // doc.data() is never undefined for query doc snapshots
+                var dId=doc.id
+                var washingtonRef = db.collection("campaign").doc(dId);
 
-    var result =  newarr.reduce((result, field, index)=> {
-      lamba=lamba+1;
-      result[newIdArr[index]] = field;
-      var key=newIdArr[index]
-      var value= field
-      var dict={
-        [newIdArr[index]]: value
-      }
-      console.log(key)
-        finalArr.push(dict)
-        // finalArr.push({result})
+              // Set the "capital" field of the city 'DC'
+            washingtonRef.update({
+                  testimonials: fund1,
+                  anyblog: true
 
+                });
+        this.setState({
 
-      return result;
-    }, {})
+          testimonials1: null
+        })
 
-    console.log(finalArr)
-    this.setState({
-      Suarr: finalArr
-    });
 
 })
-.catch(function(error) {
-    console.log("Error getting documents: ", error);
-});
+})
 }
+
+
+    grouping(){
+      var cid= this.props.match.params.cid;
+      db.collection("campaign").where("cid", "==", cid)
+      .get()
+      .then((querySnapshot)=> {
+          querySnapshot.forEach((doc)=> {
+              // doc.data() is never undefined for query doc snapshots
+              this.setState({
+                name: doc.data().name,
+
+
+              })
+          });
+      })
+
+      .catch(function(error) {
+          console.log("Error getting documents: ", error);
+      });
+    }
 
 
 render(){
@@ -83,30 +85,30 @@ var gid=this.props.match.params.groupId;
                 appStore.auth.isLoggedIn ?
                 (
                   <Fragment>
-                    <Header1/>
-                    {
-                        <Fragment>
-                          <button class="btn waves-effect waves-light center-align" onClick={()=>{this.kootah()}}> show peeps to add!</button>
+                  <Header/>
+                  <h1>Project: {this.state.name}</h1>
 
-                          <ul>
-                          {
+                  <br/><br/>
+                  <div class="row">
+                        <form class="col s12">
+                          <div class="row">
+                            <div class="input-field col s12">
+                              <input value={this.state.testimonials1} id="email"  class="active" onChange={(e)=>{
+                                this.setState({
+                                  testimonials1: e.target.value
+                                })
+                              }}/>
+                              <label class="active"><font color="green">Please be informative</font></label>
+                              <span class="helper-text " data-error="wrong" data-success="right"><font color="green">Blog-test</font></span>
+                            </div>
+                          </div>
+                        </form>
+                        <button class="btn waves-effect waves-light center-align" type="submit" name="action" onClick={()=>{this.handleClick()}}>Submit!
+                        <i class="material-icons right">send</i>
 
+                      </button>
 
-                            this.state.Suarr.map((m, i)=>{
-                              for(var x in m){
-                                var y= m[x]
-                                console.log({y})
-                              }
-
-                              return(
-
-                              <li><Link to={"/MsgPage/"+gid+"/AddPar/UserAdd/" + x}>  <div class="white"><pre key={i}><b>{y}</b></pre></div></Link></li>
-                            )
-                            })
-                          }
-                          </ul>
-                        </Fragment>
-                    }
+                      </div>
                   </Fragment>
 
                 )
