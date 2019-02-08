@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import * as remoteActions from '../scripts/remoteActions.js';
 import { observer } from 'mobx-react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import fire from '../scripts/fire.js';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import logo from './logouse.png';
@@ -98,19 +99,13 @@ dB.collection("users").add({
 
         <h5 style = {h2s} className = "cyan-text darken-2"> "To improve health and foster other human rights with those most in need by accompanying communities, while educating and inspiring others to action." </h5>
 
-        <p className > We are a private, not-for-profit organization promoting health and other human rights throughout the world. Our principles of action outline the basics of our organization's values. DGH is comprised of hundreds of health professionals, students, educators, artists, attorneys, engineers, retirees and others. Together we build long-term relationships between people and communities around the world to find effective solutions to social justice issues.
-
-
-
-Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them. We fund and support local projects that build on the energy, creativity and passion of local leaders. We educate and advocate for domestic and foreign policies that promote justice and peace. We accompany communities in fulfilling health and other human rights.
-
-</p>
+        
  <br/>
 
         <h2 style = {h2s}> Fund Raising </h2>
 
         <p> Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them. </p>
-        <a className='white btn'><font color="green"><Link to="/MsgPage">Donate Now!</Link></font></a>
+        <a className='white btn black-text'><Link to="/MsgPage">Donate Now!</Link></a>
         </div>
         <br/>
 
@@ -209,7 +204,7 @@ Though many of us are health professionals, our solutions extend far beyond the 
   </div>
 
 
-
+  <Footer/>
   </Fragment>
                 )
               :
@@ -332,7 +327,7 @@ Though many of us are health professionals, our solutions extend far beyond the 
   </div>
 
 
-
+  <Footer/>
         </div>
 
                 )

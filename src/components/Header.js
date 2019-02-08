@@ -44,8 +44,8 @@ cool(){
           </ul>
           <nav>
               <div class="nav-wrapper blue-grey darken-3">
-                <a class="brand-logo"><Link to='/'><font color="green"> RuDoc</font></Link></a>
-                <a href="#" data-target="mobile-demo" className="right sidenav-trigger green-text " ><i className="material-icons">menu</i></a>
+                <a class="brand-logo cyan-text text-lighten-4"><Link to='/'><font color = "cyan">RuDoc</font></Link></a>
+                <a href="#" data-target="mobile-demo" className="right sidenav-trigger cyan-text text-lighten-4" ><i className="material-icons">menu</i></a>
 
 
                   {
@@ -57,23 +57,23 @@ cool(){
                       }
                                   <ul className="right hide-on-med-and-down">
 
-                        <li><a class="dropdown-trigger white btn" href="#!" data-target="dropdown1"><font color="green">MENU</font><i class="material-icons right"><font color="green">arrow_drop_down</font></i></a></li>
+                        <li><a class="dropdown-trigger cyan-text text-lighten-4" href="#!" data-target="dropdown1">MENU<i class="material-icons right">arrow_drop_down</i></a></li>
                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                         <li>
-                          <button  className='white btn' onClick={remoteActions.signOut}><font color="green"> Sign Out</font></button>
+                          <a  className='cyan-text text-lighten-4' onClick={remoteActions.signOut}> Sign Out</a>
                         </li>
 
                         &nbsp;&nbsp;&nbsp;
-                        <li><button  className='white btn'><font color="green">{appStore.currentUser.displayName}</font></button></li>
+                        <li><a  className='cyan-text text-lighten-4'>{appStore.currentUser.displayName}</a></li>
 
                         </ul>
                          <ul className = "sidenav" id="mobile-demo">
                          <li>
-                          <Link to  className='white btn' onClick={remoteActions.signOut}><font color="green"> Sign Out</font></Link>
+                          <Link to  className='white btn green-text' onClick={remoteActions.signOut}> Sign Out</Link>
                         </li>
 
-        <li><Link to='/'> Start a campaign</Link></li>
-          <li><Link to='/'>View previous campaigns</Link></li>
+        <li><Link to='/createGroup'> Start a campaign</Link></li>
+
           <li><Link to='/'>Add testimony</Link></li>
   </ul>
                       </Fragment>
@@ -82,17 +82,17 @@ cool(){
                       <Fragment>
                        <ul className="right hide-on-med-and-down">
                         <li>
-                          <button className='btn white' onClick={remoteActions.signIn}><font color="green">Sign In</font></button>
+                          <a className=' cyan-text text-lighten-4' onClick={remoteActions.signIn}>Sign In</a>
                         </li>
-                        <li><Link className="btn white" to = "/about"><font color="green">About Us</font></Link></li>
+                        <li><Link className="cyan-text text-lighten-4" to = "/about">About Us</Link></li>
                         </ul>
                                   <ul className = "sidenav" id="mobile-demo">
                                   <li>
-                          <Link to  className='white btn' onClick={remoteActions.signIn}><font color="green"> Sign In</font></Link>
+                          <Link to className='white btn green-text' onClick={remoteActions.signIn}> Sign In</Link>
                         </li>
-        <li><Link to='/'> Start a campaign</Link></li>
-          <li><Link to='/'>View previous campaigns</Link></li>
-          <li><Link to='/'>Add testimony</Link></li>
+
+          <li><Link to='/'>About Us</Link></li>
+
   </ul>
 
                           </Fragment>

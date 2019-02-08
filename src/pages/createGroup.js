@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import * as remoteActions from '../scripts/remoteActions.js';
 import Header from '../components/Header.js';
+import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import appStore from '../store/appstore.js';
 import { observer } from 'mobx-react';
@@ -191,7 +192,7 @@ componentDidMount(){
                           </button>
                           </div>
 
-
+                          <Footer/>
               </Fragment>
             )
           :

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import * as remoteActions from '../scripts/remoteActions.js';
 import { observer } from 'mobx-react';
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import fire from '../scripts/fire.js';
 import firebase from 'firebase';
 var db =fire.firestore();
@@ -160,7 +161,7 @@ render(){
 
 
                 </ul>
-
+                <Footer/>
               </Fragment>
 
             )
