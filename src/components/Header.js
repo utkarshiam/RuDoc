@@ -44,7 +44,7 @@ cool(){
           </ul>
           <nav>
               <div class="nav-wrapper grey lighten-5">
-                <a href="#" class="brand-logo"><font color="green">RuDoc</font></a>
+                <a href="#" class="brand-logo"><Link to='/'><font color="green"> RuDoc</font></Link></a>
                 <ul  class="right">
                   {
                     appStore.auth.isLoggedIn?
@@ -67,9 +67,12 @@ cool(){
                       </Fragment>
                     ) :
                     (
+                      <ul>
                         <li>
                           <button className='btn' onClick={remoteActions.signIn}>Sign In</button>
                         </li>
+                        <li><Link to = "/about"><font color="green">About Us</font></Link></li>
+                        </ul>
                     )
                   }
 
