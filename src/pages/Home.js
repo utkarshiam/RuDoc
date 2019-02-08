@@ -5,12 +5,20 @@ import * as remoteActions from '../scripts/remoteActions.js';
 import { observer } from 'mobx-react';
 import Header from '../components/Header';
 import fire from '../scripts/fire.js';
+import M from 'materialize-css/dist/js/materialize.min.js';
+import logo from './logouse.png';
+
 
 var dB =fire.firestore();
 class Home extends Component{
 
 componentDidMount(){
     // remoteActions.setListenerOnAuthChange()
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.slider');
+    var instances = M.Slider.init(elems,{'indicators' : true, 'interval': 1600, 'height':400});
+  });
+
 }
 checkAndRetrive(){
    dB.collection("users").where("uid", "==", appStore.currentUser.uid)
@@ -56,42 +64,15 @@ checkAndRetrive(){
 
                 (
                   <Fragment>
-                  <br/><br/>
-                    <a href="#" data-target="slide-out" class="sidenav-trigger btn">Click to view profile</a>
-                    <ul id="slide-out" class="sidenav">
-                      <li><div class="user-view">
-                        <div class="background">
-                          <img src="https://i.ytimg.com/vi/tsjd7xdgfjA/maxresdefault.jpg"/>
-                        </div>
-                        <a href="#user"><img class="circle" src={appStore.currentUser.photoURL}/></a>
-                        <a href="#name"><span class="white-text name">{appStore.currentUser.displayName}</span></a>
-                        <a href="#email"><span class="white-text email">{appStore.currentUser.email}</span></a>
-                      </div></li>
-                      <li>userID:- {appStore.currentUser.uid}</li>
-                      <br/><br/>
-                      <li><div class="divider"></div></li>
-                      <li><a class="sidenav-close green" href="#!">Clicking this will close Sidenav</a></li>
-                    </ul>
-
-
-                                {
-
-                                  this.checkAndRetrive()
-
-
-                                }
-
-                    {console.log(appStore.currentUser.photoURL)}
-                    </Fragment>
+        <img class="responsive-img" src={logo}/>
+                  </Fragment>
 
                 )
               :
                 (
                   <Fragment>
-
-
-                      
-                    </Fragment>
+                    <img class="responsive-img" src={logo}/>
+                  </Fragment>
 
                 )
 

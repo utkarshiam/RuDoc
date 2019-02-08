@@ -60,10 +60,7 @@ cool(){
                           <button  className='white btn' onClick={remoteActions.signOut}><font color="green"> Sign Out</font></button>
                         </li>
 
-                        <li>
-
-                          <img style={styles.profile} src={appStore.currentUser.photoURL} class="circle responsive-img"/>
-                        </li>
+                        &nbsp;&nbsp;&nbsp;
                         <li><button  className='white btn'><font color="green">{appStore.currentUser.displayName}</font></button></li>
                       </Fragment>
                     ) :
