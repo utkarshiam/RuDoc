@@ -38,8 +38,9 @@ cool(){
     return(
         <div>
         <ul id="dropdown1" class="dropdown-content">
-          <li><Link to='/createGroup'> Create Group</Link></li>
-          <li><Link to='/existingGroups'>Existing Groups</Link></li>
+          <li><Link to='/'> Start a campaign</Link></li>
+          <li><Link to='/'>View previous campaigns</Link></li>
+          <li><Link to='/'>Add testimony</Link></li>
           <li class="divider"></li>
           </ul>
           <nav>
@@ -53,25 +54,25 @@ cool(){
                       {
                         this.cool()
                       }
-                        <li><a class="dropdown-trigger green btn" href="#!" data-target="dropdown1">MENU<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a class="dropdown-trigger white btn" href="#!" data-target="dropdown1"><font color="green">MENU</font><i class="material-icons right"><font color="green">arrow_drop_down</font></i></a></li>
                          &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
                         <li>
-                          <button className='green btn' onClick={remoteActions.signOut}> Sign Out</button>
+                          <button  className='white btn' onClick={remoteActions.signOut}><font color="green"> Sign Out</font></button>
                         </li>
 
                         <li>
 
                           <img style={styles.profile} src={appStore.currentUser.photoURL} class="circle responsive-img"/>
                         </li>
-                        <li><button className='btn green'>{appStore.currentUser.displayName}</button></li>
+                        <li><button  className='white btn'><font color="green">{appStore.currentUser.displayName}</font></button></li>
                       </Fragment>
                     ) :
                     (
                       <ul>
                         <li>
-                          <button className='btn' onClick={remoteActions.signIn}>Sign In</button>
+                          <button className='btn white' onClick={remoteActions.signIn}><font color="green">Sign In</font></button>
                         </li>
-                        <li><Link to = "/about"><font color="green">About Us</font></Link></li>
+                        <li><Link className="btn white" to = "/about"><font color="green">About Us</font></Link></li>
                         </ul>
                     )
                   }
