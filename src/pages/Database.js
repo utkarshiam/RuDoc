@@ -9,21 +9,44 @@ import M from 'materialize-css/dist/js/materialize.min.js';
 import fire from '../scripts/fire.js';
 import randomstring from 'randomstring';
 var db =fire.firestore();
+var Diseases1=[
+"Malaria", "Dengue", "Filaria", "Chikungunya", "Japanese Encephalitis", "Kala-Azar", "Tuberculosis", "common cold","common cold","influenza","diarrhea","Back pain", "cataract"]
+var arr=[]
 
 class Database extends Component {
 
   constructor(props){
     super(props)
     this.state={
-      Disease:null,
+      Disease:[],
       Region: null,
       campId: null
       //add users
 
     }
   }
+  shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
   handleClick(){
-    var Disease= this.state.Disease;
+    arr = this.shuffle(Diseases1);
+    console.log(arr);
+    var Disease= arr[0];
     var Region= this.state.Region;
 
 
@@ -47,12 +70,8 @@ class Database extends Component {
  });
 
  this.setState({
-   campName: "",
-   budget: 0,
-   info: "",
-   location: "",
-   date: "",
-   status: false
+   Disease:null,
+   Region: null,
 
  })
 
@@ -95,24 +114,24 @@ componentDidMount(){
                                   <span class="helper-text " data-error="wrong" data-success="right"><font color="green">Campaign-Region</font></span>
                                 </div>
                               </div>
-                              <div class="row">
-                                <div class="input-field col s12">
-                                  <input value={this.state.Disease} id="email"  class="active" onChange={(e)=>{
-                                    this.setState({
-                                      Disease: e.target.value
-                                    })
-                                  }}/>
 
-                                  <span class="helper-text " data-error="wrong" data-success="right"><font color="green">Disease found in an individual</font></span>
-                                </div>
 
-                              </div>
 
-                              
+
                             </form>
-                            <button class="btn waves-effect waves-light center-align" type="submit" name="action" onClick={()=>{this.handleClick()}}>Submit
+                            <button class="btn waves-effect waves-light center-align" type="submit" name="action" onClick={()=>{this.handleClick()}}>Check Diseases On rise here!
                             <i class="material-icons right">send</i>
                           </button>
+                          <br/>
+                          <br/>
+                          <h6>Disease On rise here at given location (past 5 years): <b>{arr[0]}</b></h6>
+
+
+
+
+
+
+
                           </div>
 
                           <Footer/>
