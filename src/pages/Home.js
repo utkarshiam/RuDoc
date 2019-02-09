@@ -14,6 +14,9 @@ import gareeb3 from './gareeb3.jpeg';
 import gareeb4 from './gareeb4.jpg';
 import gareeb5 from './gareeb5.jpg';
 import gareeb6 from './gareeb6.jpg';
+import gareeb7 from './photo7.jpg';
+import gareeb8 from './gareeb8.jpg';
+
 
 const h2s = {
 
@@ -25,7 +28,7 @@ const h2s = {
 
 const imgs = {
   maxWidth : '100%',
-  height : '300px'
+  height : '260px'
 }
 
 var dB =fire.firestore();
@@ -36,6 +39,10 @@ componentDidMount(){
     document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.slider');
     var instances = M.Slider.init(elems,{'indicators' : true, 'interval': 1600, 'height':400});
+  });
+    document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems);
   });
 
 }
@@ -99,108 +106,62 @@ dB.collection("users").add({
 
         <h5 style = {h2s} className = "cyan-text darken-2"> "To improve health and foster other human rights with those most in need by accompanying communities, while educating and inspiring others to action." </h5>
 
-        
+
  <br/>
+          <div className = "row">
+          <div className = "col s12 m6 l6">
+         <img src={gareeb7} style = {imgs}/>
+         </div>
+         <div className = "col s12 m6 l6">
+         <img src={gareeb8} style = {imgs}/>
+         </div>
+         </div>
+
 
         <h2 style = {h2s}> Fund Raising </h2>
 
         <p> Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them. </p>
-        <a className='white btn black-text'><Link to="/MsgPage">Donate Now!</Link></a>
+        <a className='white btn pulse black-text'><Link to="/MsgPage">Donate Now!</Link></a>
         </div>
         <br/>
+        <div className = "container">
 
+        <h2 style = {h2s}>Some of our projects </h2>
 
-<h2 style = {h2s}> Our Past Experiences </h2>
-
-<div class="row">
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb1} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+        <div className = "row">
+        <div className = "col s12 m6 l6">
+        <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src={gareeb6} style = {imgs}/>
     </div>
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb2} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Saaf Safaai<i class="material-icons right">more_vert</i></span>
+      <p><Link to ="/MsgPage/WvUEWFW1beagxr0nN6UcMa0okeDpfK2P">Donate for us!</Link></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Saaf Safaai<i class="material-icons right">close</i></span>
+      <p>Please help us LMAO</p>
     </div>
   </div>
-<div class="row">
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb3} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+  </div>
+          <div className = "col s12 m6 l6">
+
+ <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src={gareeb4} style = {imgs}/>
     </div>
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb4} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">hello<i class="material-icons right">more_vert</i></span>
+      <p><Link to ="/MsgPage/WesQB4NxshWDvActlv9qjEtGK1R0QnSC">Donate for us!</Link></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">hello<i class="material-icons right">close</i></span>
+      <p>Please help us LMAO</p>
     </div>
   </div>
-<div class="row">
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb5} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
-    </div>
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb6} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
+
   </div>
 
 
@@ -209,7 +170,10 @@ dB.collection("users").add({
                 )
               :
                 (
-                  <div>
+                  <Fragment>
+                
+
+
 
         <img class="responsive-img" src={logo}/>
 
@@ -219,116 +183,67 @@ dB.collection("users").add({
 
         <h5 style = {h2s} className = "cyan-text darken-2"> "To improve health and foster other human rights with those most in need by accompanying communities, while educating and inspiring others to action." </h5>
 
-        <p className > We are a private, not-for-profit organization promoting health and other human rights throughout the world. Our principles of action outline the basics of our organization's values. DGH is comprised of hundreds of health professionals, students, educators, artists, attorneys, engineers, retirees and others. Together we build long-term relationships between people and communities around the world to find effective solutions to social justice issues.
 
-
-
-Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them. We fund and support local projects that build on the energy, creativity and passion of local leaders. We educate and advocate for domestic and foreign policies that promote justice and peace. We accompany communities in fulfilling health and other human rights.
-
-</p>
+ <br/>
+          <div className = "row">
+          <div className = "col s12 m6 l6">
+         <img src={gareeb7} style = {imgs}/>
+         </div>
+         <div className = "col s12 m6 l6">
+         <img src={gareeb8} style = {imgs}/>
+         </div>
+         </div>
 
 
         <h2 style = {h2s}> Fund Raising </h2>
 
         <p> Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them. </p>
+        <a className='white btn pulse black-text'><Link to="/MsgPage">Donate Now!</Link></a>
+        </div>
+        <br/>
+        <div className = "container">
 
-        </div>
+        <h2 style = {h2s}>Some of our projects </h2>
 
-
-<div class="row">
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb1} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+        <div className = "row">
+        <div className = "col s12 m6 l6">
+        <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src={gareeb6} style = {imgs}/>
     </div>
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb2} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">Saaf Safaai<i class="material-icons right">more_vert</i></span>
+      <p><Link to ="/MsgPage/WvUEWFW1beagxr0nN6UcMa0okeDpfK2P">Donate for us!</Link></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">Saaf Safaai<i class="material-icons right">close</i></span>
+      <p>Please help us LMAO</p>
     </div>
   </div>
-<div class="row">
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb3} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+  </div>
+          <div className = "col s12 m6 l6">
+
+ <div class="card">
+    <div class="card-image waves-effect waves-block waves-light">
+      <img class="activator" src={gareeb4} style = {imgs}/>
     </div>
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb4} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
+    <div class="card-content">
+      <span class="card-title activator grey-text text-darken-4">hello<i class="material-icons right">more_vert</i></span>
+      <p><Link to ="/MsgPage/WesQB4NxshWDvActlv9qjEtGK1R0QnSC">Donate for us!</Link></p>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title grey-text text-darken-4">hello<i class="material-icons right">close</i></span>
+      <p>Please help us LMAO</p>
     </div>
   </div>
-<div class="row">
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb5} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
-    </div>
-    <div class="col s12 m6 l6">
-      <div class="card grey lighten-3">
-        <div class="card-image">
-          <img src={gareeb6} style = {imgs}/>
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-        <div class="card-action">
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
+
   </div>
 
 
   <Footer/>
-        </div>
+  </Fragment>
 
                 )
 

@@ -168,7 +168,54 @@ render(){
              :
             (
 
-              <Link to='/'><h1> Let's Sign-in First</h1></Link>
+              <Fragment>
+
+                <Header/>
+
+                  <ul>
+
+                  <h1> List of active Fundraising campaigns</h1>
+
+                  {
+
+                    this.state.message.map((m, i)=>{
+                      console.log("hello121")
+                      for(var x in m){
+                        var y= m[x]
+                        console.log(x)
+                      }
+
+                      return(
+
+                      <li>
+                      <div>
+                      <pre key={i}>
+                      <div class="row">
+                        <div class="col s12 m6">
+                          <div class="card blue-grey darken-1">
+                            <div class="card-content white-text">
+
+                              <p><b>{y}</b></p>
+                            </div>
+                            <div class="card-action">
+                              <Link to={"/MsgPage/"+x}>Donate Us!</Link>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      </pre></div></li>
+                    )
+                    })
+              }
+
+
+
+
+
+
+                </ul>
+                <Footer/>
+              </Fragment>
             )
 
         }

@@ -110,7 +110,35 @@ render(){
           )
             :
           (
-              <button class="btn waves-effect waves-light center-align"><Link to='/'><h1> Let's Sign-in First</h1></Link></button>
+            <Fragment>
+
+                <Header/>
+                <h1>Project: {this.state.name}</h1>
+                <h6>Collection Aim: {this.state.budget}</h6>
+                <h6>Collected Amount: {this.state.fund}</h6>
+                <br/><br/>
+                <div class="row">
+                      <form class="col s12">
+                        <div class="row">
+                          <div class="input-field col s12">
+                            <input value={this.state.fundx} id="email"  class="active" onChange={(e)=>{
+                              this.setState({
+                                fundx: e.target.value
+                              })
+                            }}/>
+                            <label class="active"><font color="green">Please donate generously</font></label>
+                            <span class="helper-text " data-error="wrong" data-success="right"><font color="green">Donation-amount</font></span>
+                          </div>
+                        </div>
+                      </form>
+                      <button class="btn waves-effect waves-light center-align" type="submit" name="action" onClick={()=>{this.handleClick()}}>Donate!
+                      <i class="material-icons right">send</i>
+
+                    </button>
+
+                    </div>
+                    <Footer/>
+            </Fragment>
           )
 
 
