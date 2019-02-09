@@ -23,6 +23,7 @@ const h2s = {
   textAlign : 'center',
   fontFamily : 'Railway',
   fontWeight : 'bold',
+  fontSize: "20px"
 
 }
 

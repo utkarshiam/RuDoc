@@ -10,7 +10,7 @@ import fire from '../scripts/fire.js';
 import randomstring from 'randomstring';
 var db =fire.firestore();
 var Diseases1=[
-"Malaria", "Dengue", "Filaria", "Chikungunya", "Japanese Encephalitis", "Kala-Azar", "Tuberculosis", "common cold","common cold","influenza","diarrhea","Back pain", "cataract"]
+"Malaria", "Dengue", "Filaria", "Chikungunya", "Japanese Encephalitis", "Kala-Azar", "Tuberculosis", ,"influenza","diabetes","Bloodpressure"]
 var arr=[]
 
 class Database extends Component {
