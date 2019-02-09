@@ -43,6 +43,9 @@ cool(){
           <li><Link to='/'>Verify Yourself</Link></li>
           <li><Link to='/Blogs'>Blogs</Link></li>
           </ul>
+          <ul id="dropdown2" class="dropdown-content">
+            <li><Link to='/existingGroups'>Write Testimony</Link></li>
+            <li><Link to='/Database'>Database</Link></li></ul>
           <nav>
               <div class="nav-wrapper blue-grey darken-3">
                 <a class="brand-logo cyan-text text-lighten-4"><Link to='/'><font color = "cyan">RuDoc</font></Link></a>
@@ -65,7 +68,7 @@ cool(){
                         </li>
 
                         &nbsp;&nbsp;&nbsp;
-                        <li><a  className='cyan-text text-lighten-4'><Link to='/existingGroups'>{appStore.currentUser.displayName}</Link></a></li>
+                        <li><a  className='dropdown-trigger cyan-text text-lighten-4' href="#!" data-target="dropdown2">{appStore.currentUser.displayName}<i class="material-icons right">arrow_drop_down</i></a></li>
 
                         </ul>
                          <ul className = "sidenav" id="mobile-demo">
@@ -77,7 +80,8 @@ cool(){
 
 
           <li><Link to='/'>Verify yourself</Link></li>
-          <li><Link to='/existingGroups'>{appStore.currentUser.displayName}</Link></li>
+          <li><Link to='/existingGroups'>Write Testimony</Link></li>
+          <li><Link to='/Blogs'>Database</Link></li>
           <li><Link to='/Blogs'>Blogs</Link></li>
           <li><Link to='/'>About Us</Link></li>
   </ul>
