@@ -7,6 +7,7 @@ import AddPar from './pages/AddPar.js';
 import Database from './pages/Database.js';
 import UserAdd from './pages/UserAdd.js';
 import Blogs from './pages/Blogs.js';
+
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import 'materialize-css/dist/css/materialize.min.css';
 import './index.css';
@@ -24,6 +25,7 @@ class App extends Component {
           <Route exact path='/MsgPage/:cid' component={UserAdd}/>
           <Route exact path='/Blogs' component={Blogs}/>
           <Route exact path='/Database' component={Database}/>
+          
 
         </div>
       </Router>

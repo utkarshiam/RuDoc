@@ -39,7 +39,7 @@ cool(){
         <div>
         <ul id="dropdown1" class="dropdown-content">
           <li><Link to='/createGroup'> Start a campaign</Link></li>
-          <li><Link to='/'>About Us</Link></li>
+          <li><Link to='/about'>About Us</Link></li>
           <li><Link to='/'>Verify Yourself</Link></li>
           <li><Link to='/Blogs'>Blogs</Link></li>
           </ul>
@@ -81,9 +81,9 @@ cool(){
 
           <li><Link to='/'>Verify yourself</Link></li>
           <li><Link to='/existingGroups'>Write Testimony</Link></li>
-          <li><Link to='/Blogs'>Database</Link></li>
+          <li><Link to='/Database'>Database</Link></li>
           <li><Link to='/Blogs'>Blogs</Link></li>
-          <li><Link to='/'>About Us</Link></li>
+          <li><Link to='/about'>About Us</Link></li>
   </ul>
                       </Fragment>
                     ) :
@@ -101,7 +101,7 @@ cool(){
                           <Link to className='white btn green-text' onClick={remoteActions.signIn}> Sign In</Link>
                         </li>
             <li><Link to='/Blogs'>Blogs</Link></li>
-          <li><Link to='/'>About Us</Link></li>
+          <li><Link to='/about'>About Us</Link></li>
 
 
   </ul>

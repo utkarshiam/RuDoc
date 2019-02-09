@@ -220,7 +220,7 @@ The most interesting partnerships, from my perspective, pair traditional healthc
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Helping poor get better Healthcare<i class="material-icons right">more_vert</i></span>
-      <p><Link to ="/MsgPage/WvUEWFW1beagxr0nN6UcMa0okeDpfK2P">Donate for us!</Link></p>
+      <p><Link to ="/MsgPage/3jjmTcwDYeH3fkdBRWe0fmapQ2MDZ3gj">Donate for us!</Link></p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Helping poor get better Healthcare<i class="material-icons right">close</i></span>
@@ -236,7 +236,7 @@ The most interesting partnerships, from my perspective, pair traditional healthc
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4">Healthcare for people in seelampur<i class="material-icons right">more_vert</i></span>
-      <p><Link to ="/MsgPage/WesQB4NxshWDvActlv9qjEtGK1R0QnSC">Donate for us!</Link></p>
+      <p><Link to ="/MsgPage/L6aj8jeNSG5BuReHAlRncDe6MwZGyjju">Donate for us!</Link></p>
     </div>
     <div class="card-reveal">
       <span class="card-title grey-text text-darken-4">Healthcare for people in seelampur<i class="material-icons right">close</i></span>
