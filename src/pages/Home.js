@@ -120,7 +120,13 @@ dB.collection("users").add({
 
         <h2 style = {h2s}> Fund Raising </h2>
 
-        <p> Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them. </p>
+        <p> Though many of us are health professionals, our solutions extend far beyond the medical. We volunteer our time and expertise in communities that invite us to join them.Last week’s announcement by Aetna and Apple of their Attain “experience” designed to enable Aetna members to achieve better health using the Apple watch was the latest in a series of partnerships vying to shake up healthcare from an unconventional angle. Others include Amazon-Berkshire Hathaway-JP Morgan’s collaboration to reshape health insurance, and Uber and Lyft’s numerous partnerships with Sutter, CareMore Health, and other healthcare systems to address transportation challenges for patients.
+
+The Heat is On
+
+Big changes in healthcare—including the shift to value-based care, the growing influence of consumerism, and a recognition that health outcomes depend on a wide array of everyday life factors ranging from foods to moods—are forcing the old guard in healthcare to recalibrate. Healthcare provider organizations alone engaged in a record-breaking 115 mergers and acquisitions in 2017, and continued apace until now, with deals already announced in 2019 between Dignity Health and Catholic Health Initiatives (CHI), among others.
+
+The most interesting partnerships, from my perspective, pair traditional healthcare players with non-traditional ones: it’s a recognition that something fundamental has to change, a point which hasn’t been lost on the 84% of the Fortune 50 companies that are already in healthcare, up from 76% in 2013. Everyone from tech giants to car manufacturers seems to gambling to some extent on healthcare. And why not, when the potential jackpot just keeps growing? </p>
         <a className='white btn pulse black-text'><Link to="/MsgPage">Donate Now!</Link></a>
         </div>
         <br/>
@@ -135,12 +141,12 @@ dB.collection("users").add({
       <img class="activator" src={gareeb6} style = {imgs}/>
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Saaf Safaai<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4">Helping poor get better Healthcare<i class="material-icons right">more_vert</i></span>
       <p><Link to ="/MsgPage/WvUEWFW1beagxr0nN6UcMa0okeDpfK2P">Donate for us!</Link></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Saaf Safaai<i class="material-icons right">close</i></span>
-      <p>Please help us LMAO</p>
+      <span class="card-title grey-text text-darken-4">Helping poor get better Healthcare<i class="material-icons right">close</i></span>
+      <p>Please your help will mean a lot to us</p>
     </div>
   </div>
   </div>
@@ -151,12 +157,12 @@ dB.collection("users").add({
       <img class="activator" src={gareeb4} style = {imgs}/>
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">hello<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4">Healthcare for people in seelampur<i class="material-icons right">more_vert</i></span>
       <p><Link to ="/MsgPage/WesQB4NxshWDvActlv9qjEtGK1R0QnSC">Donate for us!</Link></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">hello<i class="material-icons right">close</i></span>
-      <p>Please help us LMAO</p>
+      <span class="card-title grey-text text-darken-4">Healthcare for people in seelampur<i class="material-icons right">close</i></span>
+      <p>Please your help will mean a lot to us</p>
     </div>
   </div>
   </div>
@@ -171,7 +177,7 @@ dB.collection("users").add({
               :
                 (
                   <Fragment>
-                
+
 
 
 
@@ -212,12 +218,12 @@ dB.collection("users").add({
       <img class="activator" src={gareeb6} style = {imgs}/>
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Saaf Safaai<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4">Helping poor get better Healthcare<i class="material-icons right">more_vert</i></span>
       <p><Link to ="/MsgPage/WvUEWFW1beagxr0nN6UcMa0okeDpfK2P">Donate for us!</Link></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Saaf Safaai<i class="material-icons right">close</i></span>
-      <p>Please help us LMAO</p>
+      <span class="card-title grey-text text-darken-4">Helping poor get better Healthcare<i class="material-icons right">close</i></span>
+      <p>Please your help will mean a lot to us</p>
     </div>
   </div>
   </div>
@@ -228,12 +234,12 @@ dB.collection("users").add({
       <img class="activator" src={gareeb4} style = {imgs}/>
     </div>
     <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">hello<i class="material-icons right">more_vert</i></span>
+      <span class="card-title activator grey-text text-darken-4">Healthcare for people in seelampur<i class="material-icons right">more_vert</i></span>
       <p><Link to ="/MsgPage/WesQB4NxshWDvActlv9qjEtGK1R0QnSC">Donate for us!</Link></p>
     </div>
     <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">hello<i class="material-icons right">close</i></span>
-      <p>Please help us LMAO</p>
+      <span class="card-title grey-text text-darken-4">Healthcare for people in seelampur<i class="material-icons right">close</i></span>
+      <p>Please your help will mean a lot to us</p>
     </div>
   </div>
   </div>

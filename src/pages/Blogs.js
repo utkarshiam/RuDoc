@@ -96,7 +96,7 @@ render(){
                   <Fragment>
 
                       <Header/>
-                      <h1>BLOG!</h1>
+                      <h1><u>BLOG!</u></h1>
 
                       <br/><br/>
 
@@ -114,20 +114,14 @@ render(){
                           return(
 
                           <li>
-                          <div>
-                          <pre key={i}>
-                          <div class="row">
-                            <div class="col s12 m6">
-                              <div class="card blue-grey darken-1">
-                                <div class="card-content white-text">
 
-                                  <p><b>{y}</b></p>
-                                </div>
 
-                              </div>
-                            </div>
-                          </div>
-                          </pre></div></li>
+                              <hr></hr>
+                              <div class="container">
+                              <pre key={i}>
+                              <p>{y}</p></pre></div>
+                              <hr></hr>
+                          </li>
                         )
                         })
                   }
@@ -137,7 +131,7 @@ render(){
                   </Fragment>
 
 
-          
+
 
 
       }
