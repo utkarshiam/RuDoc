@@ -1,6 +1,8 @@
+# Project made for HACKDATA/SNU. Secured 5th. FO!
+
 1.) This project Uses Webpack and react both as two different builds.
 2.) The project has two servers:
-a) socket io + express
+a) socket io + express //shut down now!
 b) Simple firebase server
 3.) The project uses firestore. Need collaboration to write postgresql queries!!!
 
